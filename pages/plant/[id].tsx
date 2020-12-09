@@ -24,11 +24,7 @@ const renderer = {
   a: (p) => <Link {...p} target='_blank' rel='noopener noreferrer'></Link>,
 };
 
-const Plant = ({ plant, gqlplant }) => {
-  React.useEffect(() => {
-    console.log(gqlplant);
-  }, []);
-
+const Plant = ({ plant }) => {
   return (
     <>
       <div
@@ -105,8 +101,6 @@ export async function getStaticProps({ params }) {
   );
   const plant = await res.json();
   // Pass plants data to the page via props
-
-  // const gqlplant = await getPlant(params.id);
 
   return { props: { plant } };
 }
