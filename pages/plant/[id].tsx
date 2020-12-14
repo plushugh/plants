@@ -60,7 +60,7 @@ const Plant = ({ plant }) => {
              <img
               height='320px'
               src={
-                plant.MainImage[0].formats.medium.url
+                plant.MainImage[0].formats.large ? plant.MainImage[0].formats.large.url : plant.MainImage[0].formats.medium ? plant.MainImage[0].formats.medium.url : plant.MainImage[0].formats.small ? plant.MainImage[0].formats.small.url : plant.MainImage[0].formats.thumbnail.url
               }
             ></img> 
           </Box>
