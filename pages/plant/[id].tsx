@@ -35,7 +35,7 @@ const Plant = ({ plant }) => {
       >
         <Paper
           style={{
-            maxWidth: 680,
+            maxWidth: 820,
             margin: '10vh auto',
             padding: '12px 24px',
           }}
@@ -43,16 +43,28 @@ const Plant = ({ plant }) => {
           <Box display='flex' width='100%'>
             <Box flexGrow={1}>
               <Typography variant='h2'>{plant.Name}</Typography>
-              <code style={{ fontStyle: 'italic' }}>{plant.LatinName}</code>
-              <TableContainer>
+              <code style={{ fontStyle: 'italic' }}>拉丁文名字: {plant.LatinName}</code>
+              <TableContainer style={{padding: "0 32px 0 0px"}}>
                 <Table>
                   <TableRow>
-                    <TableCell>Genus</TableCell>
-                    <TableCell>{plant.Genus}</TableCell>
+                    <TableCell>门</TableCell>
+                    <TableCell>{plant.Phylum}</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>Species</TableCell>
-                    <TableCell>{plant.Species}</TableCell>
+                    <TableCell>纲</TableCell>
+                    <TableCell>{plant.Class}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>目</TableCell>
+                    <TableCell>{plant.Order}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>科</TableCell>
+                    <TableCell>{plant.Family}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>属</TableCell>
+                    <TableCell>{plant.Genus}</TableCell>
                   </TableRow>
                 </Table>
               </TableContainer>
