@@ -47,26 +47,22 @@ const Plant = ({ plant }) => {
               <TableContainer>
                 <Table>
                   <TableRow>
-                    <TableCell>Other Names</TableCell>
-                    <TableCell>sadasd</TableCell>
+                    <TableCell>Genus</TableCell>
+                    <TableCell>{plant.Genus}</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>Wiki</TableCell>
-                    <TableCell>
-                      <Link>Wikipedia</Link>
-                    </TableCell>
+                    <TableCell>Species</TableCell>
+                    <TableCell>{plant.Species}</TableCell>
                   </TableRow>
                 </Table>
               </TableContainer>
             </Box>
-            <img
+             <img
               height='320px'
-              width='clamp(6vw,10vw,320px)'
               src={
-                process.env.NEXT_PUBLIC_STRAPI_URL +
-                plant.MainImage[0].formats.thumbnail.url
+                plant.MainImage[0].formats.medium.url
               }
-            ></img>
+            ></img> 
           </Box>
           <Box padding='32px 8px 8px 8px'>
             <ReactMarkdown
