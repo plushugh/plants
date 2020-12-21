@@ -1,17 +1,22 @@
 import React from 'react';
 
-import { Box, Link } from '@material-ui/core';
+import Link from "next/link"
+
+import { Button, Paper } from '@material-ui/core';
 
 export default function Home({ plants }) {
   return (
     <>
-      <Box>
+      <Paper style={{margin:"64px auto", maxWidth: 720,width: "100%"}}>
         {plants.map((plant) => (
-          <Link href={process.env.NEXT_PUBLIC_STRAPI_URL + plant.id}>
-            {plant.Name}
-          </Link>
+          <>
+            <Link href={process.env.NEXT_PUBLIC_SITE_URL + "/plant/" + plant.id} key={plant.id}>
+              <Button fullWidth variant="text" color="primary">{plant.Name}</Button>
+            </Link>
+            <br />
+          </>
         ))}
-      </Box>
+      </Paper>
     </>
   );
 }
