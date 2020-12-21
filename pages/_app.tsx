@@ -107,13 +107,13 @@ export default function App(props) {
             rel='icon'
             type='image/png'
             sizes='16x16'
-            href='/public/favicon-16x16.png'
+            href='public/favicon-16x16.png'
           />
-          <link rel='manifest' href='/public/manifest.json' />
+          <link rel='manifest' href='public/manifest.json' />
           <meta name='msapplication-TileColor' content='#2196f3' />
           <meta
             name='msapplication-TileImage'
-            content='/ms-icon-144x144.png'
+            content='/public/ms-icon-144x144.png'
           ></meta>
 
           <link
